@@ -22,6 +22,7 @@ SRC	= barometerTest.C
 
 default:
 	$(CXX) $(CXXFLAGS) $(SRC) -o barometerTest
+	mv barometerTest ../build/barometerTest
 
 clean:
-	@ rm barometerTest
+	@ rm ../build/barometerTest

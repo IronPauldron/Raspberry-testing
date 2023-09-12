@@ -1,11 +1,10 @@
 DESTDIR = /usr
 PREFIX = /local
-LDCONFIG = sudo ldconfig
 
 CXX = g++
 CXXSTANDARD = -std=c++14
-OPTFLAGS = -O3 -flto
-MFLAGS = -mcpu=native
+OPTFLAGS = -O3 -flto -fwhole-program
+MFLAGS = -mcpu=native -march=native -mtune=native
 PFLAGS = -pthread
 WFLAGS = -D_FORTIFY_SOURCE=2 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wformat-security -Winline -Wformat=2 -Wattributes \
 -Wbuiltin-macro-redefined -Wcast-align -Wdiv-by-zero -Wdouble-promotion -Wfloat-equal -Wint-to-pointer-cast -Wlogical-op -Woverflow \
